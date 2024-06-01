@@ -438,6 +438,41 @@ main .ro a{
     margin-top: 2rem;
 }
 
-.right
+.right .sa .item{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1;
+    margin: 10px 0;
+    width: 100%;
+    margin-bottom: 0.8rem;
+    padding: 1.4rem 1.8rem;
+    border-radius: 1.2rem;
+    box-shadow: rgba(132, 139, 200, 0.18);
+}
+
+.right .sa .item:hover{
+    box-shadow: none;
+}
+
+.right .sa .item .icon{
+    background: coral;
+    padding: 0.6rem;
+    color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    align-items: center;
+}
+
+.right .sa .item:nth-child(3) .icon{
+    background-color: #41f1b6;
+}
+
+.right .sa .item:nth-child(3) .icon{
+    background-color: #ff7782;
+}
 
 
