@@ -107,9 +107,7 @@ aside.logo{
     gap: 1rem;
 }
 
-aside .top div.close{
-    display: none;
-}
+
 
 /*sidebar*/
 
@@ -475,4 +473,131 @@ main .ro a{
     background-color: #ff7782;
 }
 
+.add_products div{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed;
+    color: #677483;
+    margin-bottom: 40px;
+}
 
+/*Media Query to make Website Responsive*/
+
+@media screen and (max-width:1200px) {
+    .container{
+        width: 94%;
+        grid-template-columns: 7rem auto 14rem;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+    main.insights{
+        display: grid;
+        grid-template-columns: repeat(1,fr);
+    }
+}
+
+/*Media Query for Mobiles*/
+
+@media screen and (max-width:768px) {
+    .container{
+        width: 100%;
+        grid-template-columns: repeat(1,fr);
+    }
+
+    aside{
+        position: fixed;
+        width: 18rem;
+        z-index: 3;
+        background: white;
+    }
+
+    aside .logo h2{
+        display: inline;
+    }
+
+    aside .sidebar h3{
+        display: inline;
+    }
+
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+
+
+
+    aside .top div.close span{
+        display: inline;
+        position: absolute;
+        right: 0;
+        margin-right: 30px;
+        font-size: 35px;
+    }
+
+    .right .top{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0.8rem;
+        background: white;
+        width: 100%;
+        height: 4.6rem;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem 0 2rem 3rem rgba(132, 139, 200, 0.18);
+        margin: 0;
+    }
+
+    main .insights{
+        display: grid;
+        grid-template-columns: repeat(1,fr);
+        gap: 1.6rem;
+        padding: 40px;
+    }
+
+    .main .recent_order{
+        padding: 30px;
+        margin: 0 auto;
+    }
+
+    .right .profile{
+        position: absolute;
+        left: 70%;
+    }
+
+    .right .recent_updates{
+        padding: 30px;
+    }
+
+    .right .sa{
+        padding: 30px;
+    }
+    
+    .add_products{
+        padding: 30px;
+    }
+
+    .right .top button{
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: #363949;
+        position: absolute;
+        left: 1rem;
+    }
+
+}
