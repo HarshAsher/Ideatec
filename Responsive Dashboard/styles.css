@@ -365,7 +365,7 @@ main .ro a{
     display: none;
 }
 
-.right .theme-toggler{
+.right .theme-toggler {
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -432,7 +432,7 @@ main .ro a{
 
 /*Sales Analytics Styling*/
 
-.right .sales .sa{
+.right .sa{
     margin-top: 2rem;
 }
 
@@ -502,7 +502,7 @@ main .ro a{
         margin-top: 1.8rem;
     }
 
-    main.insights{
+    main .insights{
         display: grid;
         grid-template-columns: repeat(1,fr);
     }
@@ -521,6 +521,7 @@ main .ro a{
         width: 18rem;
         z-index: 3;
         background: white;
+        display: none;
     }
 
     aside .logo h2{
@@ -579,6 +580,8 @@ main .ro a{
         left: 70%;
     }
 
+    
+    
     .right .recent_updates{
         padding: 30px;
     }
