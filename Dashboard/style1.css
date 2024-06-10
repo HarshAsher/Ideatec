@@ -211,9 +211,7 @@ b{
    border-radius: var(--border-radius-1);
  }
 
- /* ----------------------------
- --------- Main--------------
- ------------------------------ */
+ /* Main */
 
  main{
   margin-top: 1.4rem;
@@ -386,9 +384,7 @@ main .recent_order a{
 }
 
 
-/*********************
-Right Side
-**********************/
+/*Right Side*/
 
 .right{
   margin-top: 1.4rem;
