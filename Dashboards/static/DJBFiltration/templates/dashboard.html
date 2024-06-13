@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{% static 'DJBFiltration/js/moment.min.js' %}" crossorigin="anonymous"></script>
+    <script src="{% static 'DJBFiltration/js/jquery.min.js' %}" crossorigin="anonymous"></script>
+    <link href="{% static 'DJBFiltration/css/bootstrap.min.css' %}" rel="stylesheet" crossorigin="anonymous">
+    <script src="{% static 'DJBFiltration/js/bootstrap.bundle.min.js' %}" crossorigin="anonymous"></script>
+
+<!--    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+    {{ user_name | json_script:"user_name" }}
+    {{ sub_id | json_script:"sub_id" }}
+    {{ per_page | json_script:"per_page" }}
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <div class="carousel-container">
+        <div id="carousel_test" class="carousel slide" data-bs-ride="carousel" data-bs-interval="30000" data-bs-pause="false" data-bs-touch="true">
+            <!-- data-bs-pause="false" -->
+            <div class="carousel-inner">
+                <!-- Slides -->
+            </div>
+        </div>
+    </div>
+    <!-- <button id="themeButton" onclick="fChangeColor()">Theme</button> -->
+    <div id="no-internet-popup">Check Internet Connectivity</div>
+</body>
+
+<script>var svg_url = "{% static 'DJBFiltration/svg/Filtration_h.svg' %}";</script>
+<script src="{% static 'DJBFiltration/js/dashboard.js' %}"></script>
+<link rel="stylesheet" href="{% static 'DJBFiltration/css/dashboard.css' %}">
+</html>
+
