@@ -29,6 +29,16 @@
 --color-amber-light:#F98E41;
 --color-amber-dark:#DD6102;
 
+/*Light theme colors*/
+
+--color-lightthemebg:#FBFFDC;
+--color-gd:#1E5128;
+--color-b:#191A19;
+--color-gl:#D8E9A8;
+--color-orange-light:#DC5F00;
+--color-orange-dark:#D04848;
+--color-rd:#C40C0C;
+--color-rl:#FF0000;
 }
 
 
@@ -40,6 +50,7 @@
   font-style: normal;
   font-variation-settings:
     "slnt" 0;
+    max-height: 50%;
 }
 
 .inter-bold {
@@ -109,6 +120,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  
 }
 
 #no-internet-popup {
@@ -132,10 +144,15 @@ body {
     margin-bottom: 0.5%;
     position:relative;
     min-height: 24%;
-    max-height: 35%;
+    max-height: 50%;
     min-width: 24.6%;
-    max-width: 35%; 
+    max-width: 35%;
     background-color: var(--color-gainsboro);
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px lightblue;
+    gap: 90px; 
     /* box-shadow:  4px 4px 4px #585858,
                  0 0 0 #6b6b6b,
                  0 0 0 #585858 inset,
@@ -190,6 +207,27 @@ body {
   }
 
 }
+
+/* Define the glow animation */
+@keyframes glowAnimation{
+  0% {
+      filter: brightness(1);
+  }
+  50% {
+      filter: brightness(2);
+  }
+  100% {
+      filter: brightness(1);
+  }
+}
+
+/* Apply the glow effect */
+.glow-animation {
+  animation: glowAnimation 5s ease-out;
+  
+}
+
+
 
 .card-container:not(:nth-of-type(4n)) {
   margin-right: 0.3%;
@@ -399,3 +437,23 @@ body {
 @media screen and (max-width: 400px),  screen and (max-height: 200px){
   body {  font-size: 6px;}
 }
+
+@media (max-width:768px){
+  .card-container{
+    flex-direction: column;
+    flex: 100%;
+    max-width: 100%;
+    display: block;
+    height: 32%;
+    font-size: 12px;
+  }
+
+  
+  .inter-normal{
+    flex: none;
+    width: 100%;
+    
+  }
+  
+}
+
