@@ -50,7 +50,7 @@
   font-style: normal;
   font-variation-settings:
     "slnt" 0;
-    max-height: 50%;
+
 }
 
 .inter-bold {
@@ -99,6 +99,19 @@ body {
 
 #themeButton:hover {
   background-color: #007B9A; 
+}
+
+#themeButton:active,
+#themeButton:focus {
+    background-color: #007B9A; /* Applies when pressed or focused */
+    color: #fff;
+}
+
+/* Disable hover effect on touch devices */
+@media (hover: none) {
+  #themeButton:hover {
+        background-color: black; /* Reset hover effect on touch devices */
+    }
 }
 
 .page-container
@@ -153,6 +166,7 @@ body {
     overflow: hidden;
     box-shadow: 5px 5px 5px lightblue;
     gap: 90px; 
+    flex:1 0 20%;
     /* box-shadow:  4px 4px 4px #585858,
                  0 0 0 #6b6b6b,
                  0 0 0 #585858 inset,
@@ -456,4 +470,43 @@ body {
   }
   
 }
+
+@media screen and (max-width: 1080px) and (orientation: landscape) {
+  .card-container {
+    display: block;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    min-height: 100%;
+    font-size : 15px;
+    flex: 1;
+  }
+
+  /*.inter-normal, .inter-italic {
+    flex: 1;
+    max-width: 40%;
+    min-height:20%;
+    font-size : 15px
+  }*/
+
+  .card-title{
+    align-items: center;
+    text-align: center;
+    
+  }
+
+  /*.card-background{
+    font-size: clamp(12px, 2vw, 15px); /* Responsive font size with limits 
+    overflow-wrap: break-word; 
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }*/
+
+  .card-status-value{
+    font-size: 25px;
+  }
+}
+
+
 
