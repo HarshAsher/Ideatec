@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Connect to Wi-Fi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+    function fScanWifi()
+    {
+      // var req = new XMLHttpRequest();
+      // req.open('GET', document.location, true);
+      // req.send(null);
+      // req.onload = function() {
+      //   var headers = req.getAllResponseHeaders().toLowerCase();
+      //   console.log(headers);
+        var headers = {"accept-ranges": "none", "connection": "close", "content-disposition": "inline",
+                       "filename":"wifimanager.html","content-length": "1585", "content-type": "text/html",
+                       "wifis": "itsipl5:-51,airtel_9894780016:-60,itsipl9:-62,itsipl 7:-69,dhil1508:-90,"
+                      };
+        console.log(headers);
+    }
+  </script>
+</head>
+<body>
+  <div class="topnav">
+    <h1>Connect to Wi-Fi</h1>
+  </div>
+  <div class="wifi-list">
+    <button onclick="fScanWifi()">SCAN</button>
+  </div>
+  <div class="content">
+    <div class="card-grid">
+      <div class="card">
+        <form action="/" method="POST">
+          <p>
+            <label for="ssid">SSID</label>
+            <input type="text" id ="ssid" name="ssid"><br>
+            <label for="pass">Password</label>
+            <input type="text" id ="pass" name="pass"><br>
+            <label for="ip">IP Address</label>
+            <input type="text" id ="ip" name="ip" value="192.168.1.200"><br>
+            <label for="gateway">Gateway Address</label>
+            <input type="text" id ="gateway" name="gateway" value="192.168.1.1"><br>
+            <input type ="submit" value ="Submit">
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,403 @@
+/* General Styles */
+html,body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #a5e65a, #a5e65a, #c0f080);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    flex-direction: column;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 90vh;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 90vh;
+}
+
+.router-image {
+    position: relative;
+    max-width: 250px;
+    max-height: 250px;
+    margin-top: 100px;
+    align-self: center;
+    
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    
+}
+
+.form-container {
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    
+    min-height: 80%;
+    max-width: 400px;
+    width: 90%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1; /* Allow form to grow and fill vertical space */
+}
+
+.form-group {
+    
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+
+.form-group label {
+    
+    margin-right: 10px;
+    
+    width: 50px;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 250px;
+    margin-bottom: 30px; /* Increased space between form fields */
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    border: 2px solid #ccc; /* Border style */
+    border-radius: 6px
+}
+
+input[type="checkbox"]:checked::before {
+    content: '\2713'; /* Unicode character for check mark */
+    display: block;
+    text-align: center;
+    font-size: 18px; /* Adjust size as needed */
+    line-height: 1; /* Adjust for vertical alignment */
+    color: #fff; /* Tick color */
+    background-color: black; /* Tick background color */
+    border-radius: 1px; /* Rounded tick */
+    transition: background-color 0.3s ease; /* Transition animation */
+}
+
+/* Optional hover effect */
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+.reveal-input-container {
+    
+    margin-bottom: 10px; /* Add space between revealed inputs and other form fields */
+}
+
+.reveal-input {
+    display: none;
+    padding: 8px;
+}
+
+.reveal-input:active,
+.reveal-input:focus {
+      display: block; /* Make sure the input is displayed properly when active */
+}
+
+#ip-checkbox{
+    margin-top: -50px;
+    margin-bottom: -7px;
+    margin-left: 1px;
+    
+}
+
+#gateway-checkbox{
+    margin-top: -50px;
+    margin-bottom: -4px;
+    margin-left: 1px;
+}
+
+button{
+    margin-top: 50px;
+}
+
+button[type="submit"] {
+    position: absolute;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background 0.3s;
+    align-self: center;
+    bottom: 70px;
+}
+
+button[type="submit"]{
+    background-color: green;
+}
+
+
+button:hover {
+    background: linear-gradient(to right, #a5e65a, #8bdb50);
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: lightgreen;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    
+    align-items: center;
+    margin-bottom: 400px;
+}
+
+  /* Dropdown button on hover & focus */
+.dropbtn:hover {
+    background-color: #2980B9;
+}
+
+  /* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+  /* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    max-width: 1000px;
+    width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 52%;
+    max-height: 200px; /* Limit the height of the dropdown menu */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.dropdown-content::-webkit-scrollbar {
+    width: 20px; /* Width of the scrollbar */
+}
+
+.dropdown-list{
+    text-overflow: ellipsis;
+}
+
+.dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content li {
+    padding: 10px 16px;
+    cursor: pointer;
+    margin: 0;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-content li:hover {
+    background-color: #ddd;
+}
+
+  /* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown-list {
+    padding: 0;
+    margin: 0;
+}
+
+.show {display:block;}
+
+.wifi-item  {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.wifi-signal{
+    
+    width: 20px; /* Adjust image width as needed */
+    height: 23px;
+}
+
+.wifi-signal-selected{
+    width: 25px; /* Adjust size as needed */
+    height: 25px; /* Adjust size as needed */
+    vertical-align: middle; /* Align image with text */
+    margin-right: 5px; /* Add some space between image and text */
+}
+
+.hidden{
+    display: none;
+}
+
+.dropdown-icon {
+    font-size: 10px;
+    margin-left: 40px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px; /* Optional: Adjust to desired width */
+        padding: 10px;
+    }
+    .image-section, .form-section {
+        padding: 0;
+        text-align: center;
+    }
+    .form-section {
+        padding-top: 20px; /* Optional: Add some spacing */
+    }
+    .image-section img {
+        width: 80px; /* Optional: Adjust size for mobile */
+    }
+    .form-section input[type="text"],
+    .form-section input[type="password"] {
+        width: 100%; /* Make inputs full-width */
+    }
+}
+
+/* General styles for mobile view */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .form-section {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        box-shadow: none; /* Remove shadow for a cleaner mobile look */
+    }
+
+    .dropdown {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .input-group label {
+        margin-bottom: 5px;
+    }
+
+    .input-group input[type="text"],
+    .input-group input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .input-group .checkbox-wrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .checkbox-wrapper label {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    .button-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .button-container button {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    /* Adjusting the signal image to fit better in mobile view */
+    .router-image {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .network-info {
+        margin-bottom: 10px;
+    }
+}
