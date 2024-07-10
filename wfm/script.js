@@ -183,40 +183,7 @@ function createDropdownItem(network) {
         document.getElementById("selectedNetworkName").textContent = network.name;
         document.getElementById("selectedNetworkImage").src = getSignalImage(network.signalStrength);
 
-    /*const li = document.createElement("li");
-    li.textContent = network.name;
-    li.classList.add('wifi-item');
-
-    const img = document.createElement("img"); // Set image based on signal strength
-    img.src = getSignalImage(network.signalStrength);
-    img.alt = `${network.signalStrength} dBm`;
-    img.classList.add('wifi-signal');
-
-    li.appendChild(img);
-
-    li.addEventListener("click", function() {
-
-        // Create a new image element for the dropdown button
-        const selectedImage = document.createElement("img");
-        selectedImage.src = getSignalImage(network.signalStrength);
-        selectedImage.alt = `${network.signalStrength} dBm`;
-        selectedImage.classList.add('wifi-signal-selected'); // Add any additional classes for styling
-
-        // Set the innerHTML of the dropdown button to include the image and the network name
-        const dropdownButton = document.getElementById("dropdownbutton");
-        dropdownButton.innerHTML = ''; // Clear existing content
-        dropdownButton.appendChild(selectedImage);
-        dropdownButton.append(` ${network.name}`); // Append the network name after the image
-
-        
-
-        // Update the selected network details
-        document.getElementById("selectedNetworkName").textContent = network.name;
-        document.getElementById("selectedNetworkImage").src = getSignalImage(network.signalStrength);
-
-        document.getElementById("dropdownbutton").textContent = `${network.name} `;
-        document.getElementById("selectedNetworkName").textContent = network.name;
-        document.getElementById("selectedNetworkImage").src = getSignalImage(network.signalStrength);*/
+    
         hideDropdown();
     });
 
@@ -237,7 +204,7 @@ function getSignalImage(signalStrength) {
     }
 }
 
-function populateDropdown() {
+function updateDropdown() {
     const dropdownlist = document.getElementById("dropdownlist");
     dropdownlist.innerHTML = ''; // Clear existing items
     networks.forEach(network => {
@@ -246,17 +213,27 @@ function populateDropdown() {
 
         listItem.addEventListener('click', () => {
         dropdownMenu.style.display = 'none'; //Hide the dropdown menu
-
-        
-
-        
         });
     });
-
 }
 
+function addNewNetwork(name, signalStrength) {
+    const newNetwork = { name: name, signalStrength: signalStrength };
+    networks.push(newNetwork);
+    updateDropdown();
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    updateDropdown();
+});
+
+// Example usage
+addNewNetwork('NEW_NETWORK', -55);
+
 // Initial population of the dropdown
-populateDropdown();
+//populateDropdown();
+
+
 
 function toggleDropdown() {
     const dropdownMenu = document.querySelector('.dropdown-menu');
